@@ -8,6 +8,7 @@ import Skills from '../Pages/Skills';
 import Contact from '../Pages/Contact';
 import Education from '../Pages/EducationTimeline';
 import Projects from '../Pages/Projects';
+import Details from '../Components/Details';
 
 const Router = createBrowserRouter(
 
@@ -24,6 +25,12 @@ const Router = createBrowserRouter(
               { path: '/projects', element: <Projects /> },
              
               { path: '/contact', element: <Contact /> },
+              {
+                path:'/projects/details/:id',
+                Component:Details
+                
+
+              }
             ],
           },
         ]);

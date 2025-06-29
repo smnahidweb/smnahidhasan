@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Tree Plant Store",
+    "id": "TPS01",
+    "description": "A full-stack e-commerce web app for selling and managing plants.",
+    "image": "/plant3.png",
+    "features": [
+      "User authentication & role-based dashboard",
+      "Add to cart, wishlist, and secure payments",
+      "Admin panel with analytics"
+    ],
+    "technologies": [
+      { "name": "React", "color": "bg-blue-100 text-blue-700" },
+      { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
+      { "name": "Node.js", "color": "bg-green-100 text-green-700" },
+      { "name": "MongoDB", "color": "bg-green-50 text-green-800" },
+      { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
+      { "name": "Express.js", "color": "bg-gray-200 text-gray-800" }
+    ],
+    "live": "https://tree-plant-store.web.app",
+    "client": "https://github.com/smnahidweb/tree-plant-store-client",
+    "server": "https://github.com/smnahidweb/tree-plant-store-server"
+  },
+  {
+    "title": "TourNest - Booking Site",
+    "id": "TNS02",
+    "description": "A modern tour booking platform with user dashboards and package management.",
+    "image": "/tour.png",
+    "features": [
+      "Public, user & admin views",
+      "Add/manage tour packages",
+      "Booking system with payment integration"
+    ],
+    "technologies": [
+      { "name": "React", "color": "bg-blue-100 text-blue-700" },
+      { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
+      { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
+      { "name": "JWT", "color": "bg-yellow-100 text-yellow-800" },
+      { "name": "MongoDB", "color": "bg-green-50 text-green-800" },
+      { "name": "Express.js", "color": "bg-gray-200 text-gray-800" }
+    ],
+    "live": "https://tour-booking-system-fa219.web.app/",
+    "client": "https://github.com/smnahidweb/tour-managesment-systems",
+    "server": "https://github.com/smnahidweb/tour-management-systems-server"
+  },
+  {
+    "title": "Lawyer.BD",
+    "id": "LBDS03",
+    "description": "A dynamic legal service platform where users can book, cancel appointments, make payments, and explore a list of lawyers.",
+    "image": "/lawer.png",
+    "features": [
+      "User can browse and view all lawyers",
+      "Booking and canceling appointments",
+      "Secure payment integration",
+      "Authentication and user dashboard"
+    ],
+    "technologies": [
+      { "name": "React", "color": "bg-blue-100 text-blue-700" },
+      { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
+      { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
+      { "name": "MongoDB", "color": "bg-green-50 text-green-800" }
+    ],
+    "live": "https://curious-torrone-3e4c10.netlify.app/",
+    "client": "https://github.com/smnahidweb/lawyer-farm",
+    "server": "https://github.com/smnahidweb/lawyer-farm"
+  }
+]

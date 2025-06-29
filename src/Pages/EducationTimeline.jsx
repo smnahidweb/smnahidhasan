@@ -35,9 +35,9 @@ const EducationTimeline = () => {
   const educationList = Object.entries(educationData);
 
   return (
-    <section id="education" className=" px-6 md:px-20 py-16">
+    <section id="education" className="px-6 md:px-20 py-16 border-1 border-[var(--color-primary)]">
       {/* Outer Box Like About Section */}
-      <div className="w-full max-w-7xl mx-auto border-2 border-[var(--color-primary)] rounded-2xl p-6 md:p-12 shadow-2xl">
+      <div className="w-full max-w-7xl mx-auto  rounded-2xl p-6 md:p-12 shadow-2xl">
         
         {/* Section Heading */}
         <div className="text-center mb-10">

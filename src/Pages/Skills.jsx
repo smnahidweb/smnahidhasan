@@ -1,48 +1,66 @@
 // src/components/Skills.jsx
 import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGithub } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiExpress, SiMongodb, SiFirebase, SiFigma, SiC, SiCplusplus } from 'react-icons/si';
+import {
+  SiJavascript, SiTailwindcss, SiExpress,
+  SiMongodb, SiFirebase, SiFigma, SiC, SiCplusplus
+} from 'react-icons/si';
 import { GiBrain } from 'react-icons/gi';
 import { MdSchool } from 'react-icons/md';
 
 const skills = [
-  { name: 'React', icon: <FaReact />, color: 'bg-blue-200 text-blue-700' },
-  { name: 'JavaScript', icon: <SiJavascript />, color: 'bg-yellow-100 text-yellow-700' },
-  { name: 'HTML5', icon: <FaHtml5 />, color: 'bg-orange-100 text-orange-700' },
-  { name: 'CSS3', icon: <FaCss3Alt />, color: 'bg-blue-50 text-blue-600' },
-  { name: 'Tailwind', icon: <SiTailwindcss />, color: 'bg-cyan-100 text-cyan-700' },
-  { name: 'Node.js', icon: <FaNodeJs />, color: 'bg-green-100 text-green-700' },
-  { name: 'Express.js', icon: <SiExpress />, color: 'bg-gray-200 text-gray-800' },
-  { name: 'MongoDB', icon: <SiMongodb />, color: 'bg-green-50 text-green-800' },
-  { name: 'Firebase', icon: <SiFirebase />, color: 'bg-amber-100 text-amber-700' },
-  { name: 'GitHub', icon: <FaGithub />, color: 'bg-gray-100 text-gray-800' },
-  { name: 'Figma', icon: <SiFigma />, color: 'bg-pink-100 text-pink-700' },
-  { name: 'C', icon: <SiC />, color: 'bg-blue-50 text-blue-700' },
-  { name: 'C++', icon: <SiCplusplus />, color: 'bg-indigo-200 text-indigo-700' },
-  { name: 'Problem Solving', icon: <GiBrain />, color: 'bg-purple-100 text-purple-700' },
-  { name: 'Mentorship', icon: <MdSchool />, color: 'bg-teal-100 text-teal-700' }
+  { name: 'React', icon: <FaReact size={50} color="#61DBFB" />, bg: 'bg-[#0e1726]', border: '#61DBFB' },
+  { name: 'JavaScript', icon: <SiJavascript size={50} color="#F7DF1E" />, bg: 'bg-[#1a1a1a]', border: '#F7DF1E' },
+  { name: 'HTML5', icon: <FaHtml5 size={50} color="#E34F26" />, bg: 'bg-[#2c1c1a]', border: '#E34F26' },
+  { name: 'CSS3', icon: <FaCss3Alt size={50} color="#1572B6" />, bg: 'bg-[#1c1f26]', border: '#1572B6' },
+  { name: 'Tailwind', icon: <SiTailwindcss size={50} color="#38B2AC" />, bg: 'bg-[#162729]', border: '#38B2AC' },
+  { name: 'Node.js', icon: <FaNodeJs size={50} color="#339933" />, bg: 'bg-[#132318]', border: '#339933' },
+  { name: 'Express.js', icon: <SiExpress size={50} color="#ffffff" />, bg: 'bg-[#2c2c2c]', border: '#ffffff' },
+  { name: 'MongoDB', icon: <SiMongodb size={50} color="#47A248" />, bg: 'bg-[#1d2a20]', border: '#47A248' },
+  { name: 'Firebase', icon: <SiFirebase size={50} color="#FFCA28" />, bg: 'bg-[#0D1117]', border: '#FFCA28' },
+  { name: 'GitHub', icon: <FaGithub size={50} color="#ffffff" />, bg: 'bg-[#181717]', border: '#ffffff' },
+  { name: 'Figma', icon: <SiFigma size={50} color="#F24E1E" />, bg: 'bg-[#2c1f1a]', border: '#F24E1E' },
+  { name: 'C Programming', icon: <SiC size={50} color="#A8B9CC" />, bg: 'bg-[#1e1f26]', border: '#A8B9CC' },
+  { name: 'C++', icon: <SiCplusplus size={50} color="#00599C" />, bg: 'bg-[#1c1e25]', border: 'white' },
+  { name: 'Problem Solving', icon: <GiBrain size={50} color="#9F7AEA" />, bg: 'bg-[#222026]', border: '#9F7AEA' },
+  { name: 'Mentorship', icon: <MdSchool size={50} color="#319795" />, bg: 'bg-[#1f2e2e]', border: '#319795' }
 ];
 
-const Skills = () => {
-  return (
-    <section id="skills" className="px-6 md:px-20 py-16 ">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-extrabold text-[#6366F1]">My Skills</h2>
-        <p className="text-gray-600 mt-2">Technologies & tools I work with</p>
-      </div>
+const Skills = () => (
+  <section id="skills" className="px-6 md:px-20 py-16 border-1 border-[var(--color-primary)]">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-extrabold text-[var(--color-primary)]">My Skills</h2>
+      <p className="text-[var(--color-secondary)] mt-2">Technologies & tools I work with</p>
+    </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium ${skill.color}`}
-          >
-            <span className="text-xl">{skill.icon}</span>
-            <span>{skill.name}</span>
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      {skills.map((skill, idx) => (
+        <div key={idx} className={`relative rounded-xl overflow-hidden ${skill.bg}`} style={{ border: `2px solid ${skill.border}` }}>
+          <div className="absolute inset-0 z-0 border-animation" style={{ '--clr': skill.border }}></div>
+          <div className="relative z-10 flex flex-col items-center justify-center p-6 space-y-3">
+            {skill.icon}
+            <span className="text-white font-medium text-lg">{skill.name}</span>
           </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+        </div>
+      ))}
+    </div>
+
+    <style>{`
+      .border-animation {
+        pointer-events: none;
+        background: conic-gradient(from 0deg, var(--clr), transparent 90%);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: destination-out;
+        animation: borderSpin 12s linear infinite;
+        padding: 2px;
+      }
+      @keyframes borderSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    `}</style>
+  </section>
+);
 
 export default Skills;

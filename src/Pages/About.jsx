@@ -7,9 +7,9 @@ import myPhoto from "/nahid.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen px-6 md:px-20 py-16">
+    <section id="about" className="px-6 md:px-20 py-16 border-1 border-[var(--color-primary)]">
       {/* Outer Border Container */}
-      <div className="w-full max-w-7xl mx-auto border-2 border-[var(--color-primary)] rounded-2xl p-6 md:p-12 shadow-2xl">
+      <div className = "">
         
         {/* Section Title */}
         <div className="text-center mb-10">
