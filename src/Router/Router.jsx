@@ -6,7 +6,7 @@ import About from '../Pages/About';
 import Skills from '../Pages/Skills';
 
 import Contact from '../Pages/Contact';
-import Education from '../Pages/Education';
+import Education from '../Pages/EducationTimeline';
 import Projects from '../Pages/Projects';
 
 const Router = createBrowserRouter(
