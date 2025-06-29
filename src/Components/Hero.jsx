@@ -1,14 +1,53 @@
-import { FaGithub, FaLinkedin, FaFacebook, FaDownload } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaDownload,
+} from 'react-icons/fa';
+import {
+  SiReact,
+  SiMongodb,
+  SiExpress,
+  SiNodedotjs,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiFirebase,
+  SiC,
+  SiCplusplus,
+} from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import myPhoto from '/nahid.jpg';
+import { useState } from 'react';
+
+const techIcons = [
+  { Icon: SiReact, color: '#61DBFB', name: 'React' },
+  { Icon: SiNodedotjs, color: '#339933', name: 'Node.js' },
+  { Icon: SiExpress, color: '#000000', name: 'Express' },
+  { Icon: SiMongodb, color: '#47A248', name: 'MongoDB' },
+  { Icon: SiJavascript, color: '#F7DF1E', name: 'JavaScript' },
+  { Icon: SiHtml5, color: '#E34F26', name: 'HTML5' },
+  { Icon: SiCss3, color: '#1572B6', name: 'CSS3' },
+  { Icon: SiTailwindcss, color: '#38B2AC', name: 'Tailwind CSS' },
+  { Icon: SiFirebase, color: '#FFCA28', name: 'Firebase' },
+  { Icon: SiC, color: '#A8B9CC', name: 'C' },
+  { Icon: SiCplusplus, color: '#00599C', name: 'C++' },
+];
 
 const Hero = () => {
+  const [paused, setPaused] = useState(false);
+
+  // Radius for orbit circle in px
+  const radius = 130;
+  const centerX = 144; // half of 288px container width
+  const centerY = 144; // half of 288px container height
+
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-between mt-10 px-4 md:px-20 py-12">
+    <section className="min-h-screen mt-20 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-12">
       {/* Left Section */}
       <div className="flex-1 text-center md:text-left space-y-6">
-        {/* Typing Name */}
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
           <Typewriter
             words={[`Hi, I am S.M.Nahid Hasan`]}
@@ -21,7 +60,6 @@ const Hero = () => {
           />
         </h1>
 
-        {/* Designation */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,54 +69,41 @@ const Hero = () => {
           Full Stack Developer skilled in MERN stack, building scalable websites with clean UI and robust backend.
         </motion.h2>
 
-        {/* Social Buttons */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 1.5, duration: 1 }}
-  className="flex flex-row flex-wrap gap-3 justify-center md:justify-start"
->
-  {/* GitHub */}
-  <button className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center justify-center gap-2">
-    <a
-      href="https://github.com/smnahidweb"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center justify-center gap-2"
-    >
-      <FaGithub size={18} /> GitHub
-    </a>
-  </button>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="flex flex-row flex-wrap gap-3 justify-center md:justify-start"
+        >
+          <a
+            href="https://github.com/smnahidweb"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center gap-2"
+          >
+            <FaGithub size={18} /> GitHub
+          </a>
 
-  {/* LinkedIn */}
-  <button className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center justify-center gap-2">
-    <a
-      href="https://linkedin.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center justify-center gap-2"
-    >
-      <FaLinkedin size={18} /> LinkedIn
-    </a>
-  </button>
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center gap-2"
+          >
+            <FaLinkedin size={18} /> LinkedIn
+          </a>
 
-  {/* Facebook */}
-  <button className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center justify-center gap-2">
-    <a
-      href="https://web.facebook.com/nahid592002"
-      target="_blank"
-      rel="noreferrer"
-      className="flex items-center justify-center gap-2"
-    >
-      <FaFacebook size={18} /> Facebook
-    </a>
-  </button>
-</motion.div>
+          <a
+            href="https://web.facebook.com/nahid592002"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center gap-2"
+          >
+            <FaFacebook size={18} /> Facebook
+          </a>
+        </motion.div>
 
-
-
-        {/* Resume Button */}
-   <motion.a
+       <motion.a
   href="/resume.pdf"
   download
   initial={{ opacity: 0, y: 20 }}
@@ -90,18 +115,66 @@ const Hero = () => {
 </motion.a>
       </div>
 
-      {/* Right Section – Image */}
+      {/* Right Section */}
       <motion.div
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
-        className="flex-1 mt-12 md:mt-0 flex justify-center"
+        className="relative flex-1 mt-12 md:mt-0 flex justify-center items-center"
       >
-        <img
-          src={myPhoto}
-          alt="Nahid Hasan"
-          className="w-60 h-60 md:w-80 md:h-80 rounded-full object-cover border-4 border-[var(--color-primary)] shadow-lg"
-        />
+        <div
+          className={`relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center`}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          {/* Profile Image */}
+          <img
+            src={myPhoto}
+            alt="Nahid Hasan"
+            className="w-full h-full md:w-60 md:h-60 rounded-full object-cover border-4 border-[var(--color-primary)] shadow-lg z-10"
+          />
+
+          {/* Orbiting Icons */}
+          <div
+            className="absolute w-full h-full"
+            style={{
+              animationPlayState: paused ? 'paused' : 'running',
+              animation: 'spin-slow 20s linear infinite',
+            }}
+          >
+            {techIcons.map(({ Icon, color, name }, i) => {
+              // Calculate angle for even spacing
+              const angle = (360 / techIcons.length) * i;
+              // Convert angle to radians
+              const rad = (angle * Math.PI) / 180;
+
+              // Calculate icon position on circle
+              const x = centerX + radius * Math.cos(rad);
+              const y = centerY + radius * Math.sin(rad);
+
+              return (
+                <div
+                  key={name}
+                  className="orbit-icon tooltip"
+                  style={{
+                    top: y,
+                    left: x,
+                    color,
+                    position: 'absolute',
+                    transform: 'translate(-50%, -50%)',
+                    fontSize: '1.5rem',
+                    cursor: 'default',
+                    zIndex: 5,
+                  }}
+                >
+                  <Icon />
+                  {/* Tooltip */}
+                  <span className="tooltip-text">{name}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </motion.div>
     </section>
   );

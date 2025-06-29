@@ -24,7 +24,7 @@ const EducationCard = ({ title, data, align }) => {
     titleIcons[title] || <FaGraduationCap className="text-[var(--color-secondary)] text-xl" />;
 
   return (
-    <div
+    <div data-aos="fade-up"
       className={`flex flex-col md:flex-row ${
         isLeft ? "" : "md:flex-row-reverse"
       } items-start md:items-center gap-6 w-full`}

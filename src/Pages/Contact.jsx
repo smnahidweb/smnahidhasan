@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 md:px-10 lg:px-20">
+    <section id="contact" className="py-20 px-6 md:px-10 lg:px-20" data-aos="fade-up">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20 items-start border border-[var(--color-primary)] rounded-xl p-6 md:p-10 lg:p-16">
 
         {/* Left Column – Contact Info */}
@@ -102,7 +102,7 @@ const Contact = () => {
               <FaMapMarkerAlt size={26} className="text-indigo-500 mt-1" />
               <div>
                 <h4 className="font-semibold text-white text-xl">Location</h4>
-                <p>Dhaka, Bangladesh</p>
+                <p>Dhaka-1230, Bangladesh</p>
               </div>
             </div>
           </div>

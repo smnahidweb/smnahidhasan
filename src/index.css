@@ -18,4 +18,56 @@
   --color-accent: #10B981;
   --color-highlight:#F59E0B;
 }
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
+.orbit-icon {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+/* Show tooltip text on hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive icon size */
+@media (min-width: 768px) {
+  .orbit-icon {
+    font-size: 2rem !important;
+  }
+}
