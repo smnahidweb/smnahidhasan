@@ -9,6 +9,7 @@ import Contact from '../Pages/Contact';
 import Education from '../Pages/EducationTimeline';
 import Projects from '../Pages/Projects';
 import Details from '../Components/Details';
+import DetailsPage from '../Pages/DetailsPage';
 
 const Router = createBrowserRouter(
 
@@ -27,7 +28,7 @@ const Router = createBrowserRouter(
               { path: '/contact', element: <Contact /> },
               {
                 path:'/projects/details/:id',
-                Component:Details
+                Component:DetailsPage
                 
 
               }

@@ -7,7 +7,7 @@ import myPhoto from "/nahid.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="px-6 md:px-20 py-16 border-1 border-[var(--color-primary)]">
+    <section id="about" className="px-6 md:px-20 py-16 mt-10 border-1 border-[var(--color-primary)]">
       {/* Outer Border Container */}
       <div className = "">
         

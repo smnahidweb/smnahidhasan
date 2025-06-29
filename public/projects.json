@@ -2,13 +2,11 @@
   {
     "title": "Tree Plant Store",
     "id": "TPS01",
-    "description": "A full-stack e-commerce web app for selling and managing plants.",
-    "image": "/plant3.png",
-    "features": [
-      "User authentication & role-based dashboard",
-      "Add to cart, wishlist, and secure payments",
-      "Admin panel with analytics"
-    ],
+    "description": "A full-stack e-commerce web app for selling and managing indoor & outdoor plants with user and admin roles.",
+    "image": "/all-devices-white.png",
+    "live": "https://tree-plant-store.web.app",
+    "client": "https://github.com/smnahidweb/tree-plant-store-client",
+    "server": "https://github.com/smnahidweb/tree-plant-store-server",
     "technologies": [
       { "name": "React", "color": "bg-blue-100 text-blue-700" },
       { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
@@ -17,20 +15,36 @@
       { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
       { "name": "Express.js", "color": "bg-gray-200 text-gray-800" }
     ],
-    "live": "https://tree-plant-store.web.app",
-    "client": "https://github.com/smnahidweb/tree-plant-store-client",
-    "server": "https://github.com/smnahidweb/tree-plant-store-server"
+    "features": [
+      "User authentication with Firebase",
+      
+      "Admins can manage plants, orders",
+      "Statistics analytics",
+      "Real-time form validation and secure CRUD operations"
+    ],
+    "challenges": [
+      "Implementing user role logic across dashboard",
+      "Managing and Dashboard with diversities issues i had faced",
+      "Handling secure CRUD with token-based authorization"
+    ],
+    "improvements": [
+      "Add image optimization and lazy loading",
+      "Integrate order tracking and shipping status",
+      "Improve error boundaries and custom 404 pages",
+      "Role-based dashboard for users and admins(Developing phase)",
+      "Add to cart, wishlist, and purchase plants (Developing phase)",
+      " Add a Remainder for  Watering schedule",
+      "Integrate payments method system"
+    ]
   },
   {
     "title": "TourNest - Booking Site",
     "id": "TNS02",
-    "description": "A modern tour booking platform with user dashboards and package management.",
-    "image": "/tour.png",
-    "features": [
-      "Public, user & admin views",
-      "Add/manage tour packages",
-      "Booking system with payment integration"
-    ],
+    "description": "A modern full-stack tour booking system with admin tools, user dashboard, and JWT protected routes.",
+    "image": "/tournest.png",
+    "live": "https://tour-booking-system-fa219.web.app/",
+    "client": "https://github.com/smnahidweb/tour-managesment-systems",
+    "server": "https://github.com/smnahidweb/tour-management-systems-server",
     "technologies": [
       { "name": "React", "color": "bg-blue-100 text-blue-700" },
       { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
@@ -39,29 +53,57 @@
       { "name": "MongoDB", "color": "bg-green-50 text-green-800" },
       { "name": "Express.js", "color": "bg-gray-200 text-gray-800" }
     ],
-    "live": "https://tour-booking-system-fa219.web.app/",
-    "client": "https://github.com/smnahidweb/tour-managesment-systems",
-    "server": "https://github.com/smnahidweb/tour-management-systems-server"
+    "features": [
+      "Responsive landing page with package search",
+      "JWT-protected booking and admin routes",
+      "Users can book, track, and cancel tours",
+      "Admin can manage all packages and view all bookings",
+      "Role-based access with Firebase auth and JWT",
+      "Add tour reviews and testimonials feature"
+    ],
+    "challenges": [
+      "Combining Firebase auth with custom JWT system",
+      "Handling multi-role navigation and access control",
+      "Deploying and testing backend securely on render/vercel"
+    ],
+    "improvements": [
+      "Add payment gateway (e.g. Stripe integration)",
+      "Improve search/filter UX for packages"
+      
+    ]
   },
   {
     "title": "Lawyer.BD",
     "id": "LBDS03",
-    "description": "A dynamic legal service platform where users can book, cancel appointments, make payments, and explore a list of lawyers.",
-    "image": "/lawer.png",
-    "features": [
-      "User can browse and view all lawyers",
-      "Booking and canceling appointments",
-      "Secure payment integration",
-      "Authentication and user dashboard"
-    ],
+    "description": "A dynamic platform where users can explore lawyers, book appointments, make payments, and manage their bookings.",
+    "image": "/lawyer.png",
+    "live": "https://curious-torrone-3e4c10.netlify.app/",
+    "client": "https://github.com/smnahidweb/lawyer-farm",
+    "server": "https://github.com/smnahidweb/lawyer-farm",
     "technologies": [
       { "name": "React", "color": "bg-blue-100 text-blue-700" },
       { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
       { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
       { "name": "MongoDB", "color": "bg-green-50 text-green-800" }
     ],
-    "live": "https://curious-torrone-3e4c10.netlify.app/",
-    "client": "https://github.com/smnahidweb/lawyer-farm",
-    "server": "https://github.com/smnahidweb/lawyer-farm"
+    "features": [
+      "Users can browse, filter, and view lawyer profiles",
+      "Book and cancel appointments securely",
+      "Authentication and conditional route protection",
+      "Booking confirmation via toast notifications",
+      "Admin can monitor users and appointments"
+    ],
+    "challenges": [
+      "Avoiding duplicate bookings using localStorage logic",
+  
+      "Handling toast notifications for both success and warning states"
+    ],
+    "improvements": [
+      "Add lawyer rating & feedback system",
+     "Add payment gateway (e.g. Stripe integration)",
+      "Implement server-side validation and logging",
+      "Build a better schedule-based booking UI",
+      "Make connect with more databases collection"
+    ]
   }
 ]

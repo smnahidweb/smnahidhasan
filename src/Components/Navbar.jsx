@@ -1,59 +1,106 @@
 import React from 'react';
-import { NavLink } from 'react-router'; 
+import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
-import { FaDownload } from 'react-icons/fa';
+import {
+  FaDownload,
+  FaHome,
+  FaUserGraduate,
+  FaLaptopCode,
+  FaEnvelopeOpenText,
+  FaProjectDiagram,
+} from 'react-icons/fa';
+import { HiUserCircle } from 'react-icons/hi';
 
 const Navbar = () => {
+  const navItemClass =
+    'flex items-center gap-2 text-lg font-medium text-gray-100 hover:text-white transition';
+
   const Links = (
     <>
-      <li className='text-xl font-semibold'><NavLink to='/' className="text-[var(--color-primary)]">Home</NavLink></li>
-      <li className='text-xl font-semibold'><NavLink to='/about' className="text-[var(--color-primary)]">About</NavLink></li>
-      <li className='text-xl font-semibold'><NavLink to='/education' className="text-[var(--color-primary)]">Education</NavLink></li>
-      <li className='text-xl font-semibold'><NavLink to='/skills' className="text-[var(--color-primary)]">Skills</NavLink></li>
-      <li className='text-xl font-semibold '><NavLink to='/projects' className="text-[var(--color-primary)]">Project</NavLink></li>
-      <li className='text-xl font-semibold'><NavLink to='/contact' className="text-[var(--color-primary)]">Contact</NavLink></li>
+      <li>
+        <NavLink to="/" className={navItemClass}>
+          <FaHome />
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/about" className={navItemClass}>
+          <HiUserCircle />
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/education" className={navItemClass}>
+          <FaUserGraduate />
+          Education
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/skills" className={navItemClass}>
+          <FaLaptopCode />
+          Skills
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/projects" className={navItemClass}>
+          <FaProjectDiagram />
+          Projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact" className={navItemClass}>
+          <FaEnvelopeOpenText />
+          Contact
+        </NavLink>
+      </li>
     </>
   );
 
   return (
-    <div className="navbar shadow-sm mt-2 mx-auto px-10">
+    <div className="navbar fixed top-0 left-0 w-full z-[999] px-6 py-3 mb-10 bg-indigo-500 shadow-md">
       {/* Navbar Start */}
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-gray-100">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-indigo-500 rounded-box z-10 mt-3 w-52 p-2 shadow">
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-indigo-600 rounded-box w-60 space-y-2"
+          >
             {Links}
           </ul>
         </div>
-        <a className="text-[var(--color-primary)] text-xl font-bold">Nahid</a>
+        <span className="text-xl font-bold text-gray-100 ml-2">Nahid</span>
       </div>
 
       {/* Navbar Center */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {Links}
-        </ul>
+        <ul className="menu menu-horizontal space-x-6">{Links}</ul>
       </div>
 
       {/* Navbar End */}
-     <div className="navbar-end">
+      <div className="navbar-end">
         <motion.a
-          href="/resume.pdf" // replace with your actual resume path
+          href="/resume.pdf"
           download
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="inline-flex items-center px-6 py-3 bg-[var(--color-primary)] text-white rounded-md font-medium transition"
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="flex items-center gap-2 px-5 py-2 bg-gray-100 text-indigo-600 font-semibold rounded-md hover:bg-white transition"
         >
-          <FaDownload className="mr-2" />
-          Download Resume
+          <FaDownload />
+          Resume
         </motion.a>
       </div>
-
     </div>
   );
 };
