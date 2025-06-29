@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 @plugin "daisyui"{
   themes:dark --prefersdark;
 }
@@ -10,6 +13,9 @@
 @plugin "daisyui/theme" {
   name: "dark";
   default: true;
-  --color-primary:#C7E75F;
-  --color-secondary: teal;
+  --color-primary:#6366F1;
+  --color-secondary: 	#F3F4F6;
+  --color-accent: #10B981;
+  --color-highlight:#F59E0B;
 }
+

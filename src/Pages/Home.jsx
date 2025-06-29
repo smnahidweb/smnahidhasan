@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../Components/Hero';
+
 
 import Education from './Education';
 
@@ -8,6 +8,9 @@ import Contact from './Contact';
 import About from './About';
 import ProjectCard from './Projects';
 import Projects from './Projects';
+import Hero from '../Components/Hero';
+
+
 
 const Home = () => {
     return (

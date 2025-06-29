@@ -6,7 +6,8 @@ const ParticlesBackground = ({ children }) => {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
-
+// #F59E0B
+// #0C0C0C
   return (
     <div className="relative min-h-screen">
       <Particles
