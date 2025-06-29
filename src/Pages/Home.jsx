@@ -11,7 +11,7 @@ import Projects from './Projects';
 
 const Home = () => {
     return (
-        <div className='bg-gradient-to-br from-[#F3F4F6] via-[#E0E7FF] to-white'>
+        <div className=''>
         <div>
            <Hero></Hero>
         </div>

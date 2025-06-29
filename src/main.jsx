@@ -4,8 +4,13 @@ import './index.css'
 
 import {  RouterProvider } from 'react-router'
 import Router from './Router/Router.jsx'
+import ParticlesBackground from './Components/ParticlesBackground.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={Router}></RouterProvider>
+     <ParticlesBackground>
+ <RouterProvider router={Router}></RouterProvider>
+     </ParticlesBackground>
+     
+      
   </StrictMode>,
 )

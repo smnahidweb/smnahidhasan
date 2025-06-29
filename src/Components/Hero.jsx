@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Left Section */}
       <div className="flex-1 text-center md:text-left space-y-6">
         {/* Animated Name Word by Word */}
-        <h1 className="text-4xl md:text-5xl font-bold text-[#6366F1] flex gap-2 flex-wrap justify-center md:justify-start">
+        <h1 className="text-4xl md:text-5xl font-bold text-indigo-500 flex gap-2 flex-wrap justify-center md:justify-start">
           {nameWords.map((word, index) => (
             <motion.span
               key={index}

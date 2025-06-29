@@ -2,3 +2,14 @@
 @plugin "daisyui"{
   themes:dark --prefersdark;
 }
+
+@plugin "daisyui"{
+  themes: light --default, dark;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  --color-primary:#C7E75F;
+  --color-secondary: teal;
+}
