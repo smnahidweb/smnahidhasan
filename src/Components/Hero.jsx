@@ -48,7 +48,7 @@ const Hero = () => {
       <div className="flex-1 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
           <Typewriter
-            words={['S.M.Nahid Hasan']}
+            words={['Hi, I`m S.M.Nahid Hasan']}
             loop={0}
             cursor
             cursorStyle=" "
