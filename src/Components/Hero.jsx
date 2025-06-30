@@ -43,12 +43,12 @@ const Hero = () => {
   const centerY = 144;
 
   return (
-    <section className="min-h-screen mt-20 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-12">
+    <section className="min-h-screen mt-10 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-12">
       {/* Left Section */}
       <div className="flex-1 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
           <Typewriter
-            words={['Hi, I`m S.M.Nahid Hasan']}
+            words={['S.M.Nahid Hasan']}
             loop={0}
             cursor
             cursorStyle=" "
@@ -95,7 +95,7 @@ const Hero = () => {
               href={href}
               target="_blank"
               rel="noreferrer"
-              className="border border-indigo-500 text-indigo-500 px-4 py-2 rounded-md hover:bg-indigo-500 hover:text-white transition duration-300 text-sm flex items-center gap-2"
+              className="border border-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-500 hover:text-white transition duration-300 text-sm flex items-center gap-2"
             >
               {icon} {text}
             </a>
@@ -108,7 +108,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[var(--color-primary)] text-white text-sm md:text-base mt-6 hover:scale-105 transition"
+          className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[var(--color-primary)] text-white text-sm md:text-base mt-2 hover:scale-105 transition"
         >
           <FaDownload size={16} /> Download Resume
         </motion.a>
