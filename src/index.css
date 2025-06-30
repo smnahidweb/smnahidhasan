@@ -1,71 +1,70 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* DaisyUI themes and variables */
 @custom-variant dark (&:is(.dark *));
-@plugin "daisyui"{
-  themes:dark --prefersdark;
+@plugin "daisyui" {
+  themes: dark --prefersdark;
 }
-
-@plugin "daisyui"{
+@plugin "daisyui" {
   themes: light --default, dark;
 }
-
 @plugin "daisyui/theme" {
   name: "dark";
   default: true;
-  --color-primary:#6366F1;
-  --color-secondary: 	#F3F4F6;
+  --color-primary: #6366F1;
+  --color-secondary: #F3F4F6;
   --color-accent: #10B981;
-  --color-highlight:#F59E0B;
+  --color-highlight: #F59E0B;
 }
-@keyframes spin-slow {
-  0% {
-    transform: rotate(0deg);
+
+/* Spinning animation */
+@import "tw-animate-css";
+
+@layer utilities {
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
-  100% {
-    transform: rotate(360deg);
+
+  @media (min-width: 1024px) {
+    .lg\:spin-slow {
+      animation: spin-slow 20s linear infinite;
+    }
   }
 }
 
-.orbit-icon {
-  position: absolute;
-  transition: transform 0.3s ease;
-}
-
-/* Tooltip container */
+/* Tooltip styling */
 .tooltip {
   position: relative;
   display: inline-block;
 }
-
-/* Tooltip text */
 .tooltip .tooltip-text {
   visibility: hidden;
-  width: max-content;
-  background-color: rgba(0,0,0,0.75);
-  color: #fff;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
   border-radius: 4px;
   padding: 4px 8px;
+  font-size: 0.75rem;
   position: absolute;
-  z-index: 10;
-  bottom: 125%; /* above the icon */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s;
-  white-space: nowrap;
-  font-size: 0.75rem;
+  transition: opacity 0.3s ease;
   pointer-events: none;
+  white-space: nowrap;
 }
-
-/* Show tooltip text on hover */
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-/* Responsive icon size */
+/* Optional orbit icon size for larger screens */
 @media (min-width: 768px) {
   .orbit-icon {
     font-size: 2rem !important;

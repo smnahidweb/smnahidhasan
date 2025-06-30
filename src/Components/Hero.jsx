@@ -19,8 +19,8 @@ import {
 } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
-import myPhoto from '/nahid.jpg';
 import { useState } from 'react';
+import myPhoto from '/nahid.jpg';
 
 const techIcons = [
   { Icon: SiReact, color: '#61DBFB', name: 'React' },
@@ -38,11 +38,9 @@ const techIcons = [
 
 const Hero = () => {
   const [paused, setPaused] = useState(false);
-
-  // Radius for orbit circle in px
   const radius = 130;
-  const centerX = 144; // half of 288px container width
-  const centerY = 144; // half of 288px container height
+  const centerX = 144;
+  const centerY = 144;
 
   return (
     <section className="min-h-screen mt-20 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-12">
@@ -50,7 +48,7 @@ const Hero = () => {
       <div className="flex-1 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
           <Typewriter
-            words={[`Hi, I am S.M.Nahid Hasan`]}
+            words={['S.M.Nahid Hasan']}
             loop={0}
             cursor
             cursorStyle=" "
@@ -75,44 +73,45 @@ const Hero = () => {
           transition={{ delay: 1.5, duration: 1 }}
           className="flex flex-row flex-wrap gap-3 justify-center md:justify-start"
         >
-          <a
-            href="https://github.com/smnahidweb"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center gap-2"
-          >
-            <FaGithub size={18} /> GitHub
-          </a>
-
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center gap-2"
-          >
-            <FaLinkedin size={18} /> LinkedIn
-          </a>
-
-          <a
-            href="https://web.facebook.com/nahid592002"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-indigo-500 text-white px-4 py-2 rounded-md hover:scale-105 transition duration-300 text-sm flex items-center gap-2"
-          >
-            <FaFacebook size={18} /> Facebook
-          </a>
+          {[
+            {
+              href: 'https://github.com/smnahidweb',
+              icon: <FaGithub size={18} />,
+              text: 'GitHub',
+            },
+            {
+              href: 'https://linkedin.com/',
+              icon: <FaLinkedin size={18} />,
+              text: 'LinkedIn',
+            },
+            {
+              href: 'https://web.facebook.com/nahid592002',
+              icon: <FaFacebook size={18} />,
+              text: 'Facebook',
+            },
+          ].map(({ href, icon, text }) => (
+            <a
+              key={text}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-indigo-500 text-indigo-500 px-4 py-2 rounded-md hover:bg-indigo-500 hover:text-white transition duration-300 text-sm flex items-center gap-2"
+            >
+              {icon} {text}
+            </a>
+          ))}
         </motion.div>
 
-       <motion.a
-  href="/resume.pdf"
-  download
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 2, duration: 1 }}
-  className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[var(--color-primary)] text-white text-sm md:text-base mt-6 hover:scale-105 transition"
->
-  <FaDownload size={16} /> Download Resume
-</motion.a>
+        <motion.a
+          href="/resume.pdf"
+          download
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2, duration: 1 }}
+          className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[var(--color-primary)] text-white text-sm md:text-base mt-6 hover:scale-105 transition"
+        >
+          <FaDownload size={16} /> Download Resume
+        </motion.a>
       </div>
 
       {/* Right Section */}
@@ -123,32 +122,24 @@ const Hero = () => {
         className="relative flex-1 mt-12 md:mt-0 flex justify-center items-center"
       >
         <div
-          className={`relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center`}
+          className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          {/* Profile Image */}
           <img
             src={myPhoto}
             alt="Nahid Hasan"
             className="w-full h-full md:w-60 md:h-60 rounded-full object-cover border-4 border-[var(--color-primary)] shadow-lg z-10"
           />
-
-          {/* Orbiting Icons */}
           <div
-            className="absolute w-full h-full"
+            className="absolute w-full h-full lg:spin-slow"
             style={{
               animationPlayState: paused ? 'paused' : 'running',
-              animation: 'spin-slow 20s linear infinite',
             }}
           >
             {techIcons.map(({ Icon, color, name }, i) => {
-              // Calculate angle for even spacing
               const angle = (360 / techIcons.length) * i;
-              // Convert angle to radians
               const rad = (angle * Math.PI) / 180;
-
-              // Calculate icon position on circle
               const x = centerX + radius * Math.cos(rad);
               const y = centerY + radius * Math.sin(rad);
 
@@ -168,7 +159,6 @@ const Hero = () => {
                   }}
                 >
                   <Icon />
-                  {/* Tooltip */}
                   <span className="tooltip-text">{name}</span>
                 </div>
               );

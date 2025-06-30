@@ -26,7 +26,7 @@ const skills = [
 ];
 
 const Skills = () => (
-  <section id="skills" className="px-6 md:px-20 py-16 border-1 border-[var(--color-primary)] mt-10" data-aos="fade-up">
+  <section id="skills" className="px-6 md:px-20 py-16 mt-20" data-aos="fade-up">
     <div className="text-center mb-12">
       <h2 className="text-4xl font-extrabold text-[var(--color-primary)]">My Skills</h2>
       <p className="text-[var(--color-secondary)] mt-2">Technologies & tools I work with</p>

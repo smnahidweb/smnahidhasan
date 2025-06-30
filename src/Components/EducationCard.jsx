@@ -39,7 +39,7 @@ const EducationCard = ({ title, data, align }) => {
 
           {/* Institute */}
           <p className="text-base text-[var(--color-secondary)] mb-4 flex items-center gap-3">
-            <FaSchool className="text-[var(--color-secondary)]" size={22} />
+            <FaSchool size={22}  className="text-[var(--color-secondary)]" size={22} />
             {data.institute}
           </p>
 

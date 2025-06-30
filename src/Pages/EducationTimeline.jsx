@@ -10,7 +10,7 @@ const educationData = {
     result: "3.73 out of 4.00",
     year: "4th (Running)",
     activities:
-      "Worked on real-life projects, contributed to open-source, and served as a Academy Mentor for junior students.",
+      "Built real-life projects, contributed to open-source, and mentored student's at IUBAT IT Society.",
   },
   HSC: {
     institute: "Rajshahi Cantonment Board School & College",
@@ -18,7 +18,7 @@ const educationData = {
     result: "5.00 out of 5.00",
     year: "2020",
     activities:
-      "Participated in science fairs and seminars. Completed coursework with distinction and actively volunteered in tech clubs.",
+      "Strong academic and extracurricular presence.",
   },
   SSC: {
     institute: "Bilkarilla B.M. High School",
@@ -26,7 +26,7 @@ const educationData = {
     result: "5.00 out of 5.00",
     year: "2018",
     activities:
-      "Received honors for academic excellence. Engaged in internships with industry-leading companies, gaining hands-on experience in the field of science and technology.",
+      "Received honors for academic excellence.",
   },
   
 };
@@ -35,13 +35,13 @@ const EducationTimeline = () => {
   const educationList = Object.entries(educationData);
 
   return (
-    <section id="education" className="px-6 md:px-20 py-16 border-1 border-[var(--color-primary)]">
+    <section id="education" className="px-6 md:px-20 py-16 mt-10">
       {/* Outer Box Like About Section */}
       <div className="w-full max-w-7xl mx-auto  rounded-2xl p-6 md:p-12 shadow-2xl">
         
         {/* Section Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-extrabold text-[var(--color-primary)]">
+          <h2 className="text-4xl font-extrabold mb-8 text-[var(--color-primary)]">
             Education Qualification
           </h2>
         </div>
