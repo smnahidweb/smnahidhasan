@@ -69,7 +69,7 @@ const About = () => {
             </p>
 
             <div className="mt-8 text-[var(--color-primary)] text-xl font-semibold flex flex-wrap justify-center md:justify-start gap-4">
-              <span className="flex items-center gap-2"><FaLightbulb /> Problem Solver</span>
+            
               <span className="flex items-center gap-2"><SiMongodb /> Real-Time App Builder</span>
               <span className="flex items-center gap-2"><FaReact /> Passionate Coder</span>
             </div>

@@ -43,7 +43,7 @@ const Hero = () => {
   const centerY = 144;
 
   return (
-    <section className="min-h-screen mt-10 flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-12">
+    <section className="min-h-screen mt-10 flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-20 py-12 gap-10">
       {/* Left Section */}
       <div className="flex-1 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
@@ -71,7 +71,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="flex flex-row flex-wrap gap-3 justify-center md:justify-start"
+          className="flex flex-wrap gap-3 justify-center md:justify-start"
         >
           {[
             {
@@ -102,6 +102,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
+        {/* Hidden on small devices */}
         <motion.a
           href="/resume.pdf"
           download
@@ -119,7 +120,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.5 }}
-        className="relative flex-1 mt-12 md:mt-0 flex justify-center items-center"
+        className="flex-1 flex justify-center items-center"
       >
         <div
           className="relative w-72 h-72 md:w-80 md:h-80 flex items-center justify-center"
@@ -129,13 +130,11 @@ const Hero = () => {
           <img
             src={myPhoto}
             alt="Nahid Hasan"
-            className="w-full h-full md:w-60 md:h-60 rounded-full object-cover border-4 border-[var(--color-primary)] shadow-lg z-10"
+          className="w-52 h-52 md:w-60 md:h-60 rounded-full object-cover border-4 border-[var(--color-primary)] shadow-lg z-10"
           />
           <div
             className="absolute w-full h-full lg:spin-slow"
-            style={{
-              animationPlayState: paused ? 'paused' : 'running',
-            }}
+            style={{ animationPlayState: paused ? 'paused' : 'running' }}
           >
             {techIcons.map(({ Icon, color, name }, i) => {
               const angle = (360 / techIcons.length) * i;

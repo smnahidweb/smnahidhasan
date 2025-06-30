@@ -32,7 +32,7 @@ const Skills = () => (
       <p className="text-[var(--color-secondary)] mt-2">Technologies & tools I work with</p>
     </div>
 
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" data-aos="fade-up">
       {skills.map((skill, idx) => (
         <div key={idx} className={`relative rounded-xl overflow-hidden ${skill.bg}`} style={{ border: `2px solid ${skill.border}` }}>
           <div className="absolute inset-0 z-0 border-animation" style={{ '--clr': skill.border }}></div>
