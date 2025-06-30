@@ -43,7 +43,7 @@ const Hero = () => {
   const centerY = 144;
 
   return (
-    <section className="min-h-screen mt-10 flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-20 py-12 gap-10">
+    <section className="min-h-screen mt-20 flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-20 py-12 gap-10">
       {/* Left Section */}
       <div className="flex-1 text-center md:text-left space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
