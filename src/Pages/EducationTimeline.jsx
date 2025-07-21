@@ -1,7 +1,6 @@
 import React from "react";
 import EducationCard from "../Components/EducationCard";
 
-
 const educationData = {
   Graduation: {
     institute:
@@ -28,17 +27,16 @@ const educationData = {
     activities:
       "Received honors for academic excellence.",
   },
-  
 };
 
 const EducationTimeline = () => {
   const educationList = Object.entries(educationData);
 
   return (
-    <section id="education" className="px-6 md:px-20 py-16 mt-10">
+    <section id="education" className="px-6 md:px-20 py-10 ">
       {/* Outer Box Like About Section */}
-      <div className="w-full max-w-7xl mx-auto  rounded-2xl p-6 md:p-12 shadow-2xl">
-        
+      <div className="w-full max-w-7xl mx-auto rounded-2xl p-6 md:p-12 shadow-2xl">
+
         {/* Section Heading */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-extrabold mb-8 text-[var(--color-primary)]">
@@ -47,7 +45,7 @@ const EducationTimeline = () => {
         </div>
 
         {/* Timeline Content */}
-        <div className="relative space-y-20">
+        <div className="relative space-y-10">
           {educationList.map(([title, data], idx) => (
             <EducationCard
               key={title}

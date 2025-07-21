@@ -1,4 +1,5 @@
 // src/components/Skills.jsx
+import { motion } from 'framer-motion';
 import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGithub } from 'react-icons/fa';
 import {
   SiJavascript, SiTailwindcss, SiExpress,
@@ -26,21 +27,29 @@ const skills = [
 ];
 
 const Skills = () => (
-  <section id="skills" className="px-6 md:px-20 py-16 mt-20" data-aos="fade-up">
+  <section id="skills" className="px-6 md:px-20 py-10">
     <div className="text-center mb-12">
       <h2 className="text-4xl font-extrabold text-[var(--color-primary)]">My Skills</h2>
       <p className="text-[var(--color-secondary)] mt-2">Technologies & tools I work with</p>
     </div>
 
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" data-aos="fade-up">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
       {skills.map((skill, idx) => (
-        <div key={idx} className={`relative rounded-xl overflow-hidden ${skill.bg}`} style={{ border: `2px solid ${skill.border}` }}>
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.1 }}
+          viewport={{ once: true }}
+          className={`relative rounded-xl overflow-hidden ${skill.bg}`}
+          style={{ border: `2px solid ${skill.border}` }}
+        >
           <div className="absolute inset-0 z-0 border-animation" style={{ '--clr': skill.border }}></div>
           <div className="relative z-10 flex flex-col items-center justify-center p-6 space-y-3">
             {skill.icon}
             <span className="text-white font-medium text-lg">{skill.name}</span>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
 

@@ -10,6 +10,7 @@ import ProjectCard from './Projects';
 import Projects from './Projects';
 import Hero from '../Components/Hero';
 import EducationTimeline from './EducationTimeline';
+import Awards from '../Components/Awards';
 
 
 
@@ -33,6 +34,10 @@ const Home = () => {
            <Projects></Projects>
         </div>
         
+        <div>
+            <Awards></Awards>
+        </div>
+
         <div>
             <Contact></Contact>
         </div>

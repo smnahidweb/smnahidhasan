@@ -17,7 +17,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="px-6 md:px-20 py-16 mt-10 ">
+    <section id="projects" className="px-6 md:px-10 py-10">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-[var(--color-primary)]">My Projects</h2>
         <p className="text-[var(--color-secondary)] mt-2">Some of my recent work</p>

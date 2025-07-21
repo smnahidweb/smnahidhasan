@@ -7,7 +7,7 @@ import Footer from '../Components/Footer';
 const HomeLayout = () => {
     return (
         <div>
-           <div>
+           <div className='mb-10'>
            <Navbar></Navbar>
            </div>
           

@@ -10,6 +10,7 @@ import Education from '../Pages/EducationTimeline';
 import Projects from '../Pages/Projects';
 import Details from '../Components/Details';
 import DetailsPage from '../Pages/DetailsPage';
+import Awards from '../Components/Awards';
 
 const Router = createBrowserRouter(
 
@@ -24,7 +25,7 @@ const Router = createBrowserRouter(
               {path:'/education',element:<Education></Education>},
               { path: '/skills', element: <Skills /> },
               { path: '/projects', element: <Projects /> },
-             
+              { path: '/awards-mentoring', element: <Awards></Awards> },
               { path: '/contact', element: <Contact /> },
               {
                 path:'/projects/details/:id',

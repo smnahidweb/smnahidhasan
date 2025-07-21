@@ -1,4 +1,86 @@
 [
+   
+  {
+  "title": "Life Sure - Insurance Platform",
+  "id": "LS01",
+  "description": "A complete insurance management system for customers, agents, and admins with role-based dashboards, secure routes, and Stripe integration.",
+  "image": "/lifesure.png",
+  "live": "https://life-sure.web.app/",
+  "client": "https://github.com/smnahidweb/life-insurance-management",
+  "server": "https://github.com/smnahidweb/life-insurance-management-server",
+  "technologies": [
+    { "name": "React", "color": "bg-blue-100 text-blue-700" },
+    { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
+    { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
+    { "name": "JWT", "color": "bg-yellow-100 text-yellow-800" },
+    { "name": "MongoDB", "color": "bg-green-50 text-green-800" },
+    { "name": "Express.js", "color": "bg-gray-200 text-gray-800" },
+    { "name": "Stripe", "color": "bg-purple-100 text-purple-800" }
+  ],
+  "features": [
+    "Customer dashboard for managing policy applications and payments",
+    "Agent dashboard to handle assigned customers and update application status",
+    "Admin panel for managing users, agents, policies, applications, and transactions",
+    "Secure JWT and Firebase-based auth with role-based access",
+    "Stripe integration for online premium payments",
+    "Dynamic review carousel with customer testimonials",
+    "PDF download support for policy applications",
+    "Image uploads via ImgBB for claims and blog images",
+    "Blog section for health and insurance tips"
+  ],
+  "challenges": [
+    "Handling complex multi-role access (customer, agent, admin)",
+    "Synchronizing Firebase Auth with JWT verification",
+    "Building a modular, scalable admin dashboard with multiple tools",
+    "Managing PDF generation and persistent 'Reviewed' state across reloads",
+    "Balancing backend filtering, pagination, and secure query handling"
+  ],
+  "improvements": [
+    "Add notification system for policy status updates",
+    "Enable real-time chat between customers and agents",
+    "Enhance analytics and charts in the admin dashboard",
+    "Implement 2FA or email verification during signup"
+  ]
+},
+  {
+    "title": "TourNest - Booking Site",
+    "id": "TNS02",
+    "description": "A modern full-stack tour booking system with admin tools, user dashboard, and JWT protected routes.",
+    "image": "/tournest.png",
+    "live": "https://tour-booking-system-fa219.web.app/",
+    "client": "https://github.com/smnahidweb/tour-managesment-systems",
+    "server": "https://github.com/smnahidweb/tour-management-systems-server",
+    "technologies": [
+      { "name": "React", "color": "bg-blue-100 text-blue-700" },
+      { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
+      { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
+      { "name": "JWT", "color": "bg-yellow-100 text-yellow-800" },
+      { "name": "MongoDB", "color": "bg-green-50 text-green-800" },
+      { "name": "Express.js", "color": "bg-gray-200 text-gray-800" }
+    ],
+    "features": [
+      "Responsive landing page with package search",
+      "JWT-protected booking and admin routes",
+      "Users can book, track, and cancel tours",
+      "Admin can manage all packages and view all bookings",
+      "Role-based access with Firebase auth and JWT",
+      "Add tour reviews and testimonials feature"
+    ],
+    "challenges": [
+      "Combining Firebase auth with custom JWT system",
+      "Handling multi-role navigation and access control",
+      "Deploying and testing backend securely on render/vercel"
+    ],
+    "improvements": [
+      "Add payment gateway (e.g. Stripe integration)",
+      "Improve search/filter UX for packages"
+      
+    ]
+  },
+  
+  
+  
+  
   {
     "title": "Tree Plant Store",
     "id": "TPS01",
@@ -37,41 +119,7 @@
       "Integrate payments method system"
     ]
   },
-  {
-    "title": "TourNest - Booking Site",
-    "id": "TNS02",
-    "description": "A modern full-stack tour booking system with admin tools, user dashboard, and JWT protected routes.",
-    "image": "/tournest.png",
-    "live": "https://tour-booking-system-fa219.web.app/",
-    "client": "https://github.com/smnahidweb/tour-managesment-systems",
-    "server": "https://github.com/smnahidweb/tour-management-systems-server",
-    "technologies": [
-      { "name": "React", "color": "bg-blue-100 text-blue-700" },
-      { "name": "Tailwind", "color": "bg-cyan-100 text-cyan-700" },
-      { "name": "Firebase", "color": "bg-amber-100 text-amber-700" },
-      { "name": "JWT", "color": "bg-yellow-100 text-yellow-800" },
-      { "name": "MongoDB", "color": "bg-green-50 text-green-800" },
-      { "name": "Express.js", "color": "bg-gray-200 text-gray-800" }
-    ],
-    "features": [
-      "Responsive landing page with package search",
-      "JWT-protected booking and admin routes",
-      "Users can book, track, and cancel tours",
-      "Admin can manage all packages and view all bookings",
-      "Role-based access with Firebase auth and JWT",
-      "Add tour reviews and testimonials feature"
-    ],
-    "challenges": [
-      "Combining Firebase auth with custom JWT system",
-      "Handling multi-role navigation and access control",
-      "Deploying and testing backend securely on render/vercel"
-    ],
-    "improvements": [
-      "Add payment gateway (e.g. Stripe integration)",
-      "Improve search/filter UX for packages"
-      
-    ]
-  },
+ 
   {
     "title": "Lawyer.BD",
     "id": "LBDS03",

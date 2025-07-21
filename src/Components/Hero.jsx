@@ -80,7 +80,7 @@ const Hero = () => {
               text: 'GitHub',
             },
             {
-              href: 'https://linkedin.com/',
+              href: 'https://www.linkedin.com/in/smnahidhasan5/',
               icon: <FaLinkedin size={18} />,
               text: 'LinkedIn',
             },
@@ -104,14 +104,14 @@ const Hero = () => {
 
         {/* Hidden on small devices */}
         <motion.a
-          href="/resume.pdf"
+          href="/Nahid(CV).pdf"
           download
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
           className="hidden md:inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-[var(--color-primary)] text-white text-sm md:text-base mt-2 hover:scale-105 transition"
         >
-          <FaDownload size={16} /> Download Resume
+          <FaDownload size={16} /> Download CV
         </motion.a>
       </div>
 

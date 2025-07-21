@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 mt-10 md:px-10 lg:px-20" data-aos="fade-up">
+    <section id="contact" className="py-10 px-6  md:px-10 lg:px-20" data-aos="fade-up">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20 items-start border border-[var(--color-primary)] rounded-xl p-6 md:p-10 lg:p-16">
 
         {/* Left Column – Contact Info */}

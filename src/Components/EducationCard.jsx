@@ -24,54 +24,56 @@ const EducationCard = ({ title, data, align }) => {
     titleIcons[title] || <FaGraduationCap className="text-[var(--color-secondary)] text-xl" />;
 
   return (
-    <div data-aos="fade-up"
+    <div
+      data-aos="fade-up"
       className={`flex flex-col md:flex-row ${
         isLeft ? "" : "md:flex-row-reverse"
-      } items-start md:items-center gap-6 w-full`}
+      } items-start md:items-center gap-4 md:gap-6 w-full`}
     >
       {/* Card Content */}
-      <div className="w-full md:w-5/12 px-4">
-        <div className="bg-[#1b1b3a] text-white rounded-xl shadow-lg p-6 border-l-4 border-[var(--color-primary)]">
+      <div className="w-full md:w-7/12 lg:w-6/12 px-2 sm:px-4">
+        <div className="bg-[#1b1b3a] text-white rounded-xl shadow-lg p-5 sm:p-6 md:p-8 border-l-4 border-[var(--color-primary)] space-y-5">
           {/* Title */}
-          <h3 className="text-2xl font-bold text-[var(--color-secondary)] flex items-center gap-3 mb-4">
-            {TitleIcon} {title}
+          <h3 className="text-xl sm:text-2xl font-bold text-[var(--color-secondary)] flex items-center gap-3">
+            {TitleIcon}
+            <span>{title}</span>
           </h3>
 
           {/* Institute */}
-          <p className="text-base text-[var(--color-secondary)] mb-4 flex items-center gap-3">
-            <FaSchool size={22}  className="text-[var(--color-secondary)]" size={22} />
-            {data.institute}
-          </p>
+          <div className="flex items-center gap-3 text-sm sm:text-base font-medium text-[var(--color-secondary)]">
+            <FaSchool size={20} />
+            <span>{data.institute}</span>
+          </div>
 
           {/* Info Fields */}
-          <ul className="text-sm space-y-3">
+          <ul className="text-sm sm:text-base space-y-2">
             <li className="flex items-center gap-3">
-              <FaFlask className="text-[var(--color-secondary)]" size={22} />
-              <span className="font-semibold text-[var(--color-secondary)]">Group:</span>{" "}
-              {data.group}
+              <FaFlask className="text-[var(--color-secondary)]" size={20} />
+              <strong>Group:</strong> {data.group}
             </li>
             <li className="flex items-center gap-3">
-              <FaChartBar className="text-[var(--color-secondary)]" size={22} />
-              <span className="font-semibold text-[var(--color-secondary)]">Result:</span>{" "}
-              {data.result}
+              <FaChartBar className="text-[var(--color-secondary)]" size={20} />
+              <strong>Result:</strong> {data.result}
             </li>
             <li className="flex items-center gap-3">
-              <FaCalendarAlt className="text-[var(--color-secondary)]" size={22} />
-              <span className="font-semibold text-[var(--color-secondary)]">Year:</span>{" "}
-              {data.year}
+              <FaCalendarAlt className="text-[var(--color-secondary)]" size={20} />
+              <strong>Year:</strong> {data.year}
             </li>
           </ul>
 
           {/* Activities */}
-          <div className="mt-5 space-y-3">
+          <div className="space-y-3 pt-3">
             {(Array.isArray(data.activities) ? data.activities : [data.activities]).map(
               (activity, index) => (
-                <div key={index} className="flex items-start gap-4 text-justify text-[var(--color-secondary)]">
+                <div
+                  key={index}
+                  className="flex items-start gap-3 text-[var(--color-secondary)] "
+                >
                   <FaRegLightbulb
                     className="mt-1 text-[var(--color-secondary)]"
                     size={iconSizes[index] || 16}
                   />
-                  <span className="text-sm md:text-base">{activity}</span>
+                  <span className="text-sm sm:text-base leading-relaxed">{activity}</span>
                 </div>
               )
             )}
@@ -79,7 +81,7 @@ const EducationCard = ({ title, data, align }) => {
         </div>
       </div>
 
-      {/* Timeline Dot */}
+      {/* Timeline Dot (only for md and up) */}
       <div className="hidden md:flex md:w-2/12 justify-center items-center relative">
         <div className="w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center text-white text-xl z-10">
           <FaGraduationCap />
